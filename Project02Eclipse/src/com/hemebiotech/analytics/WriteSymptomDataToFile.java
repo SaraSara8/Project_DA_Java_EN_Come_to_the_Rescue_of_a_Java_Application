@@ -8,16 +8,16 @@ import java.util.Map;
 
 public class WriteSymptomDataToFile implements ISymptomWriter {
 	
-	private String filepath;
+	final  String  filepath="./Project02Eclipse/result.out.txt";
 	
 	/**
 	 * 
-	 *  @param filepath               est le chemin complet et partieil vers le fichier resultat 
+	 *  @param filepath est le chemin complet et partieil vers le fichier resultat 
 	 *                 sur lequle on ecrit ligne par ligne
 	 */
 	
-	public WriteSymptomDataToFile (String filepath) {
-		this.filepath = filepath;
+	public WriteSymptomDataToFile () {
+		
 	}
 
 	@Override
@@ -30,11 +30,11 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 				BufferedWriter writer = new BufferedWriter (new FileWriter(filepath));
 				String line;
 				
-				for (Map.Entry mapentry : symptoms.entrySet()) {
+				for (Map.Entry<String, Integer> objEncours : symptoms.entrySet()) {
 					
-					line =mapentry.getKey() + ":" + mapentry.getValue();
+					line =objEncours.getKey() + ":" + objEncours.getValue();
 					writer.write(line);
-					
+					writer.write("\n");
 				}
 				
 				writer.close();
