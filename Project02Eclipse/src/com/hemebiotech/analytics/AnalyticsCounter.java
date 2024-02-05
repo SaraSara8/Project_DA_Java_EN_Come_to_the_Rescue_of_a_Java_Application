@@ -3,15 +3,32 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.List;
 
 public class AnalyticsCounter {
 	private static int headacheCount = 0;	
 	private static int rashCount = 0;		
 	private static int pupilCount = 0;		
 	
+	private ISymptomReader reader;
+	ISymptomWriter writer;
+	
+	public AnalyticsCounter(ISymptomReader reader, ISymptomWriter writer) { 
+		this.reader = reader;
+		this.writer = writer;
+	}
+	
+	
+	 public List<String> getSymptoms() { 
+		 
+		 return reader.GetSymptoms();
+	 }
+	
+	
+	
 	public static void main(String args[]) throws Exception {
 		// first get input
-		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
+		BufferedReader reader = new BufferedReader (new FileReader("./Project02Eclipse/symptoms.txt"));
 		String line = reader.readLine();
 		int i = 0;	
 		int headCount = 0;	// counts headaches
