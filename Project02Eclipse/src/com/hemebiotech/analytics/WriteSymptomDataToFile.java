@@ -22,7 +22,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 
 	@Override
 	public void writeSymptoms(Map<String, Integer> symptoms) {
-		// TODO Auto-generated method stub
+		
 		
 			
 		try {
