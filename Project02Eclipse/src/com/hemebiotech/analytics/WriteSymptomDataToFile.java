@@ -24,26 +24,24 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	public void writeSymptoms(Map<String, Integer> symptoms) {
 		// TODO Auto-generated method stub
 		
-		if (filepath != null) {
 			
-			try {
-				BufferedWriter writer = new BufferedWriter (new FileWriter(filepath));
-				String line;
+		try {
+			BufferedWriter writer = new BufferedWriter (new FileWriter(filepath));
+			String line;
 				
-				for (Map.Entry<String, Integer> objEncours : symptoms.entrySet()) {
+			for (Map.Entry<String, Integer> objEncours : symptoms.entrySet()) {
 					
-					line =objEncours.getKey() + ":" + objEncours.getValue();
-					writer.write(line);
-					writer.write("\n");
-				}
-				
-				writer.close();
-				
-			}catch (IOException e) {
-				e.printStackTrace();
+				line =objEncours.getKey() + ":" + objEncours.getValue();
+				writer.write(line);
+				writer.write("\n");
 			}
-
+				
+		writer.close();
+				
+		}catch (IOException e) {
+			e.printStackTrace();
 		}
+
 	}
 
 }
