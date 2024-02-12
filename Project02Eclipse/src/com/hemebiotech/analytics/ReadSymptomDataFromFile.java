@@ -7,20 +7,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Simple brute force implementation
+ * Implémentation de interface ISymptomReader,
+ * permet de lire un fichier de symptômes et met le résultant dans une liste non triée avec les doublons
+ * 
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath;
+	final  String  filepath="./Project02Eclipse/symptoms.txt";
+	
 	
 	/**
 	 * 
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * Constructeur de la classe ReadSymptomDataFromFile
 	 */
-	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
+	public ReadSymptomDataFromFile () {
+		
 	}
+	
+	
+	/**************************
+	 * 
+	 * Lit les symptômes à partir du fichier symptômes et génère  une liste,
+	 * si le fichier source est vide, on crée une liste vide
+	 * @return Une liste de tous les symptômes lus du fichier d'entrée. Les doublons sont possibles
+	 * 
+	 ************************************/
 	
 	@Override
 	public List<String> GetSymptoms() {

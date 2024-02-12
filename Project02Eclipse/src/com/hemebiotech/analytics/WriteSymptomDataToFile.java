@@ -6,19 +6,34 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+
+
+/** 
+ * Implémentation de l'interface ISymptomWriter,
+ * écrit la liste des symptômes (Map) dans un fichier,
+ * si la liste des symptômes est vide, le ficher sera crée vide
+ *  
+ *   
+ */ 
+
 public class WriteSymptomDataToFile implements ISymptomWriter {
 	
 	final  String  filepath="./Project02Eclipse/result.out.txt";
 	
 	/**
-	 * 
-	 *  @param filepath est le chemin complet et partieil vers le fichier resultat 
-	 *                 sur lequle on ecrit ligne par ligne
+	 * Constructeur de la classe WriteSymptomDataToFile
+	 *
 	 */
 	
-	public WriteSymptomDataToFile () {
+	public void WriteSymptomDataToFile () {
 		
 	}
+	
+	 /*************************************************************************
+		 * Lit une Map est écrit le résutlat dans fichier destination
+		 * si la Map est vide , le fichier sera créé vide 
+		 * @param symptoms Une Map composée de clé symptome et valeur : nombre d'occurence du symptôme
+		 **************************************************************************/
 
 	@Override
 	public void writeSymptoms(Map<String, Integer> symptoms) {
@@ -27,12 +42,15 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 			
 		try {
 			BufferedWriter writer = new BufferedWriter (new FileWriter(filepath));
-			String line;
+			
+			String ligne;
 				
 			for (Map.Entry<String, Integer> objEncours : symptoms.entrySet()) {
 					
-				line =objEncours.getKey() + ":" + objEncours.getValue();
-				writer.write(line);
+				ligne =objEncours.getKey() + ":" + objEncours.getValue();
+				
+				writer.write(ligne);
+				
 				writer.write("\n");
 			}
 				
