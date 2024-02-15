@@ -25,9 +25,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	 *
 	 */
 	
-	public void WriteSymptomDataToFile () {
-		
-	}
+	
 	
 	 /*************************************************************************
 		 * Lit une Map est écrit le résutlat dans fichier destination

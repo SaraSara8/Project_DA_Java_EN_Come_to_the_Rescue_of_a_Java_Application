@@ -17,5 +17,5 @@ public interface ISymptomReader {
 	 * @return une liste de sympômes obtenue à partir du fichier source les doublons sont possible
 	 * 
 	 */
-	List<String> GetSymptoms ();
+	List<String> getSymptoms ();
 }

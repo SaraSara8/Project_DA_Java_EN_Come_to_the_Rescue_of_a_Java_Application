@@ -33,17 +33,17 @@ public class AnalyticsCounter {
 	
 	
 	
-	/**************************
+	/************************************************************************************
 	 * 
 	 * Appel la méthode GetSymptoms de ISymptomReader qui lit les symptômes à partir du fichier source et génère  une liste, 
 	 * si le fichier source est vide, on crée une liste vide
 	 * @return Une liste de tous les symptômes lus du fichier d'entrée. Les doublons sont possibles
 	 * 
-	 ************************************/
+	 **********************************************************************************/
 	
 	 public List<String> getSymptoms() { 
 		 
-		 return reader.GetSymptoms();
+		 return reader.getSymptoms();
 	 }
 	
 	 /*************************************************************************

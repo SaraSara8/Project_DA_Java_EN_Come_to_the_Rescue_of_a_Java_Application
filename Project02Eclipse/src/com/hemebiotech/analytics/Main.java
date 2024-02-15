@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics;
 
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -18,39 +18,40 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		
+		System.out.println("lancement du programme");
 
 		
 		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile();
 		WriteSymptomDataToFile writer = new WriteSymptomDataToFile();
 		
-		AnalyticsCounter counter = new AnalyticsCounter(reader, writer);
+		AnalyticsCounter analyseCounter = new AnalyticsCounter(reader, writer);
 		
 		// lire le fichier symptoms et le mettre dans une liste
 		
 		
 	
-		List<String> symptoms = counter.getSymptoms();
+		List<String> symptoms = analyseCounter.getSymptoms();
 		
 	
 
         // on compte les symptom et on crer dans la Map 
 		//avec lés comme symptom et valeur comme compteur	
 		
-		Map<String, Integer> mapSymptoms = counter.countSymptoms(symptoms);
+		Map<String, Integer> mapSymptoms = analyseCounter.countSymptoms(symptoms);
 		
 		
 		
 		// Trier la map
 		
 		
-		Map<String, Integer> resultMap = counter.sortSymptoms(mapSymptoms);
+		Map<String, Integer> resultMap = analyseCounter.sortSymptoms(mapSymptoms);
 		
 
 		
 		//ecrire dans le fihcier resultat
 		
-		counter.writeSymptoms(resultMap);
+		analyseCounter.writeSymptoms(resultMap);
+		System.out.println("fin  du programme ");
 		
 
 	}
