@@ -20,10 +20,6 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
 	
 	final  String  filepath="./Project02Eclipse/result.out.txt";
 	
-	/**
-	 * Constructeur de la classe WriteSymptomDataToFile
-	 *
-	 */
 	
 	
 	

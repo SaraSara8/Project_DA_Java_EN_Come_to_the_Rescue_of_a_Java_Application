@@ -34,8 +34,8 @@ public class Main {
 		
 	
 
-        // on compte les symptom et on crer dans la Map 
-		//avec lés comme symptom et valeur comme compteur	
+        // on compte les symptômes et on crée dans la Map 
+		//avec clés comme symptom et valeur comme compteur	
 		
 		Map<String, Integer> mapSymptoms = analyseCounter.countSymptoms(symptoms);
 		
@@ -48,7 +48,7 @@ public class Main {
 		
 
 		
-		//ecrire dans le fihcier resultat
+		//écrire dans le fichier résultat
 		
 		analyseCounter.writeSymptoms(resultMap);
 		System.out.println("fin  du programme ");
