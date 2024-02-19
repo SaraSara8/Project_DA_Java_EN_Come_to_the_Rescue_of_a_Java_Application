@@ -11,7 +11,7 @@ import java.util.Map;
 /** 
  * Implémentation de l'interface ISymptomWriter,
  * écrit la liste des symptômes (Map) dans un fichier,
- * si la liste des symptômes est vide, le ficher sera crée vide
+ * Si la liste des symptômes est vide, le ficher sera crée vide
  *  
  *   
  */ 
