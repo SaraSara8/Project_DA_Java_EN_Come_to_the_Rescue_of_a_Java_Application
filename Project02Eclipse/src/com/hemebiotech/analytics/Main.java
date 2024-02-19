@@ -34,7 +34,7 @@ public class Main {
 		
 	
 
-        // on compte les symptômes et on crée dans la Map 
+        // On compte les symptômes et on crée dans la Map 
 		//avec clés comme symptom et valeur comme compteur	
 		
 		Map<String, Integer> mapSymptoms = analyseCounter.countSymptoms(symptoms);
